@@ -1,0 +1,32 @@
+plugins {
+	id 'org.springframework.boot' version '2.4.0'
+	id 'io.spring.dependency-management' version '1.0.10.RELEASE'
+	id 'java'
+}
+
+ext {
+	graphqlVersion = '5.0.2'
+}
+
+group = 'br.com.rosa'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '11'
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	implementation 'org.springframework.boot:spring-boot-starter'
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+	implementation 'org.springframework.boot:spring-boot-starter-web'
+	implementation 'com.h2database:h2'
+	implementation 'com.graphql-java:graphql-java-tools:5.2.4'
+	implementation "com.graphql-java:graphql-spring-boot-starter:$graphqlVersion"
+	implementation "com.graphql-java:graphiql-spring-boot-starter:$graphqlVersion"
+}
+
+test {
+	useJUnitPlatform()
+}

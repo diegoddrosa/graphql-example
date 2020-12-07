@@ -1,0 +1,7 @@
+type Query {
+    findAccount(number: String): Account
+}
+
+type Mutation {
+    createAccount(account: AccountInput): Account
+}

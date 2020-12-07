@@ -1,0 +1,15 @@
+type Account {
+    id: ID,
+    name: String,
+    bank: String,
+    branch: String,
+    number: String
+}
+
+input AccountInput {
+    id: ID,
+    name: String,
+    bank: String,
+    branch: String,
+    number: String
+}
